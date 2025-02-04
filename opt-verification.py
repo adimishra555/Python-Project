@@ -51,7 +51,7 @@ try:
 except smtplib.SMTPAuthenticationError:
     print("Authentication error! Please check your App Password settings.")
 except Exception as e:
-    print(f"An error occurred: {e}")
+    print(f"Error : {e}")
 
 
 
