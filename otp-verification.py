@@ -9,11 +9,11 @@ from email.mime.multipart import MIMEMultipart
 # Function to generate OTP
 def generate_otp(length=6):
     digits = "0123456789"
-    return ''.join(random.choice(digits) for _ in range(length))
+    return ''.join(random.choice(digits) for i in range(length))
 
 # Email sender details
 sender_email = "amishra37200@gmail.com"
-app_password = "gewz quro oegd jueg"  # Use an App Password generated from Google
+app_password = "gewz quro oegd jueg"  
 
 # Generate OTP
 OTP = generate_otp()
@@ -49,9 +49,9 @@ try:
         print("Incorrect OTP. Please try again ❌")
 
 except smtplib.SMTPAuthenticationError:
-    print("Authentication error! Please check your App Password settings.")
+    print("Authentication error! Please check  App Password settings.")
 except Exception as e:
-    print(f"An error occurred: {e}")
+    print(f" Error : {e}")
 
 
 
